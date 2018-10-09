@@ -2,11 +2,11 @@
 PRACTICE Test 2, practice_problem 2.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Lauren Smiley.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 ########################################################################
-# Students:
+# Students: 7-11 was an inside job my peoples, stay slept
 #
 # These problems have DIFFICULTY and TIME ratings:
 #  DIFFICULTY rating:  1 to 10, where:
@@ -42,7 +42,7 @@ def main():
 def run_test_practice_problem2a():
     """ Tests the   practice_problem2a  function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function.
+    # Done: 2. Implement this TEST function.
     #   It TESTS the  practice_problem2a  function defined below.
     #   Include at least **   4 reasonable   ** tests.
     #
@@ -56,8 +56,33 @@ def run_test_practice_problem2a():
     print('Testing the   practice_problem2a   function:')
     print('--------------------------------------------------')
 
+    expected = ([8, 16, 11, -14, 14])
+    actual = practice_problem2a([2, 10, 5, -20, 8], 6)
+    print('Test 1 expected: ', expected)
+    print('     actual: ', actual)
+
+    expected = ([-4, 61, 82, 3, 7])
+    actual = practice_problem2a([-5, 60, 81, 2, 6], 1)
+    print('Test 1 expected: ', expected)
+    print('     actual: ', actual)
+
+    expected = ([19, 12, 77, 56])
+    actual = practice_problem2a([12, 5, 70, 49], 7)
+    print('Test 3 expected: ', expected)
+    print('     actual: ', actual)
+
+    expected = ([9, 11, 22, 10])
+    actual = practice_problem2a([5, 7, 18, 6], 4)
+    print('Test 4 expected: ', expected)
+    print('     actual: ', actual)
+
 
 def practice_problem2a(sequence, delta):
+    for k in range(len(sequence)):
+        sequence[k] = sequence[k] + delta
+
+    return sequence
+
     """
     What comes in:
       -- A sequence of integers, e.g. ([2, 10, 5, -20, 8])
@@ -76,7 +101,7 @@ def practice_problem2a(sequence, delta):
       :type delta:    int
     """
     ####################################################################
-    # TODO: 3. Implement and test this function.
+    # Done: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
@@ -151,6 +176,13 @@ def run_test_practice_problem2b():
 
 
 def practice_problem2b(sequence):
+    letters = ''
+    for k in range(len(sequence)):
+        letter = sequence[k]
+        if letter != '':
+            letters = letters + letter[0]
+    return letters
+
     """
     What comes in:
       -- A sequence of strings, e.g. ('hello', 'Bye', 'ok joe')
@@ -170,7 +202,7 @@ def practice_problem2b(sequence):
       :type sequence [str]
     """
     ####################################################################
-    # TODO: 4. Implement and test this function.
+    # Done: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     ####################################################################
     # DIFFICULTY AND TIME RATINGS (see top of this file for explanation)
